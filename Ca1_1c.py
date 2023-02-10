@@ -2,18 +2,22 @@ import pandas as pd
 import numpy as np
 import time as tm
 
-data = pd.read_csv('CA1_1c_greenhouse_cleanedData.csv')
-print(f"Size of dataset = {data.shape}")
+data1 = pd.read_csv('CA1_1c_greenhouse_cleanedData_part1.csv')
+data2 = pd.read_csv('CA1_1c_greenhouse_cleanedData_part2.csv')
+data = pd.concat([data1,data2],ignore_index=True)
+
+# This is a cleaned data using MATLAB for easiness.
+# Data is split into 4 parts due to github data restrictions
 
 # Input variables (Change if required)
 inputAttributes = np.arange(0,5231)
 # Output variables (Change if required)
 outputAttributes = np.arange(5231,5232)
 
-inputdata=data.iloc[inputAttributes,:]
-outputdata=data.iloc[outputAttributes,:]
-X = inputdata
-Y = outputdata
+inputdata=data.iloc[:,inputAttributes]
+outputdata=data.iloc[:,outputAttributes]
+X=np.transpose(inputdata)
+Y=np.transpose(outputdata)
 print(f"Size of input data = {X.shape}")
 print(f"Size of output data = {Y.shape}")
 
