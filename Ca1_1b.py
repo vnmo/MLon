@@ -8,7 +8,7 @@ import time as tm
 # data3 = pd.read_csv('CA1_cleanedData3.csv')
 # data4 = pd.read_csv('CA1_cleanedData4.csv')
 # data = pd.concat([data1,data2,data3,data4],ignore_index=True)
-data = pd.read_csv('CA1_householdPower_cleanedData.csv')
+data = pd.read_csv('CA1_1b_householdPower_cleanedData.csv')
 # This is a cleaned data using MATLAB for easiness.
 # Data is split into 4 parts due to github data restrictions
 # Date and Time are combined and converted to UNIX format

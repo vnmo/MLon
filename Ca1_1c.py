@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import time as tm
 
-data = pd.read_csv('CA1_greenhouse_cleanedData.csv')
+data = pd.read_csv('CA1_1c_greenhouse_cleanedData.csv')
 print(f"Size of dataset = {data.shape}")
 
 # Input variables (Change if required)
